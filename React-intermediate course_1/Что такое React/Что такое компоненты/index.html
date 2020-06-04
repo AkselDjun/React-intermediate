@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Hello World</title>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <!--подключение react -->
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <!--подключение react dom -->
+  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
+  <!--подключение babel -->
+  <style>
+    .car {
+      display: inline-block;
+      border: 2px solid #ccc;
+      box-shadow: 2px 2px 1px #eee;
+      padding: 10px;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <!-- <div class="car">
+    <h2>Mazda 3</h2>
+    <p>Year: <strong>2013</strong></p>
+    <p>Color: <strong>yellow</strong></p>
+  </div>
+
+  <div class="car">
+    <h2>BMW M6</h2>
+    <p>Year: <strong>2010</strong></p>
+    <p>Color: <strong>gray</strong></p>
+  </div>
+
+  <div class="car">
+    <h2>Audi A5</h2>
+    <p>Year: <strong>2015</strong></p>
+    <p>Color: <strong>blue</strong></p>
+  </div> -->
+
+  <script type="text/babel">
+
+    function Car(props) {
+      return (
+        <div className="car">
+          <h2>{props.name}</h2>
+          <p>Year: <strong>{props.year}</strong></p>
+          <p>Color: <strong>{props.color}</strong></p>
+          <p>Engine: <strong>{props.engine}</strong></p>
+        </div>
+      )
+    }
+
+    const app = (
+      <div>
+        <Car name="Volvo S80" year="2014" color="black" engine="2.5D" />,
+        <Car name="Audi A5" year="2015" color="blue" engine="2.0T" />,
+        <Car name="BMW 6" year="2010" color="gray" engine="3.0D" />,
+        <Car name="Mazda 3" year="2016" color="white" engine="2.3T" />,
+      </div>
+    )
+
+    ReactDOM.render(
+      app,
+      document.querySelector("#root")
+    )
+
+  </script>
+</body>
+
+</html>
