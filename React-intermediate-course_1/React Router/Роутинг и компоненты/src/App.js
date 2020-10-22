@@ -25,10 +25,11 @@ class App extends Component {
 
         <hr />
 
-        {/*localhost:3000*/}
+
         <Route path="/" exact render={() => <h1>Home Page</h1>} />
         <Route path="/about" component={About} />
         <Route path="/cars" component={Cars} />
+
 
       </div>
     );
