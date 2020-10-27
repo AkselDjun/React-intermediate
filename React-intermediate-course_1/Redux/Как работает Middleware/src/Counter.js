@@ -10,6 +10,8 @@ class Counter extends React.Component {
                 <div>
                     <button onClick={() => this.props.onChange(1)}>Add</button>
                     <button onClick={() => this.props.onChange(-1)}>Sub</button>
+                    <button onClick={() => this.props.onChange(2)}>Add +2</button>
+                    <button onClick={() => this.props.onChange(-2)}>Sub -2</button>
                 </div>
             </div>
         )
